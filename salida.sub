@@ -1,0 +1,35 @@
+
+ Universe = vanilla
+ Executable  = ../code/Tester
+
+ Error = sim_$(Process)/salida_$(Process).err
+ Output = sim_$(Process)/salida_$(Process).out
+ Log = sim_$(Process)/salida_$(Process).log
+
+ should_transfer_files = YES
+ when_to_transfer_output = ON_EXIT
+ transfer_input_files = sim_$(Process)/input.conf, ../code/plotGaps.py, ../code/gaps_cluster.m 
+ transfer_output_files = results
+ transfer_output_remaps = "results = sim_$(Process)/results" 
+ 
+ arguments = $(Process)
+
+ request_cpus=1
+ request_memory=750
+
+
+
+ Queue 34
+
+
+
+
+
+
+
+
+
+
+
+
+
